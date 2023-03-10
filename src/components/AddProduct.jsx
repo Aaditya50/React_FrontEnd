@@ -10,7 +10,7 @@ function AddProduct(){
         "pcat":"",
         "price":"",
         "brand":"",
-        "sellerId":sellerid
+        "sellerId":sellerid//MODIFIED 
     })
     const [errors,setErrors]=useState({})
     const [selectedPhoto,setSelectedPhoto]=useState(null)
