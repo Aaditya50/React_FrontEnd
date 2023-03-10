@@ -46,7 +46,7 @@ function ReceivedOrder(){
                     </thead>
                     <tbody>
                         
-                        {orders.map(x=>(
+                        {orders && orders.map(x=>(
                             
                             <tr key={x.orderid}>
                                 

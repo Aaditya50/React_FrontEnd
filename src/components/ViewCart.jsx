@@ -15,11 +15,10 @@ function ViewCart(){
         "country":"India"
     })
     const [payment,setPayment]=useState({
-        "cardno":"1212444433336666",
-        "nameoncard":"Test Name",
-        "cvv":"123",
-        // "amount":state.cart.reduce((a,b)=> (a+b.price),0)
-        "amount":state.cart.reduce((a,b)=> ((a.price * a.qty)+ (b.price * b.qty)),0)
+        "cardno":"12124444333",
+        "nameoncard":"Enter Your Name",
+        "cvv":"786",
+        "amount":state.cart.reduce((a,b)=> ((a.price * 1)+ (b.price * 1)),0)
           
     })
   
@@ -67,7 +66,7 @@ function ViewCart(){
              // eslint-disable-next-line no-undef
              swal({
                 title: "Your Order is Sucessfully Placed!",
-                text: "Thank You!",
+                text: "Thank You! Service Centre will call you soon for picking up your car",
                 icon: "success",
                 button: "Ok!",
               }).then(function() {
@@ -75,11 +74,7 @@ function ViewCart(){
                 history.push('/myorders')
             });;
             
-            // eslint-disable-next-line no-undef
            
-            // <div class="alert alert-success" role="alert">
-            //     order sucessfull
-            // </div>
             
         })  
     }
@@ -95,8 +90,6 @@ function ViewCart(){
                     <tr>
                         <th>Prodid</th>
                         <th>Product Name</th>
-                        <th>Price</th>
-                        <th>Qty</th>
                         <th>Total Amount</th>
                         <th>Action</th>
                     </tr>
@@ -109,8 +102,6 @@ function ViewCart(){
                                 <img className="mr-2 float-left" src={"http://localhost:8080/"+item.photo} width="100" />
                                 {item.pname}
                             </td>
-                            <td>&#8377; {item.price}</td>
-                            <td>{item.qty}</td>
                             <td>&#8377; {item.qty * item.price}</td>
                             <td><button onClick={e=>deleteItem(item)} className="btn btn-danger">Delete</button></td>
                         

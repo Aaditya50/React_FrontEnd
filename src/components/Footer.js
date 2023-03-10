@@ -7,61 +7,43 @@ import {
   FooterLink,
   Heading,
 } from "./FooterStyles";
-import {BsFacebook,BsInstagram,BsTwitter,BsYoutube} from "react-icons/bs";
-  
+import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
+
 const Footer = () => {
   return (
     <Box>
       <Container>
-         <Row>
         <Column>
-            <Heading>Social Media</Heading>
+          <Heading>Social Media</Heading>
+          <Row>
             <FooterLink href="https://www.facebook.com/">
-              <BsFacebook/>
-                <span style={{ marginLeft: "10px" }}>
-                  Facebook
-                </span>
+              <BsFacebook style={{ marginRight: "5px" }} />
+              <span>Facebook</span>
             </FooterLink>
             <FooterLink href="https://www.instagram.com/">
-              <BsInstagram/>
-                <span style={{ marginLeft: "10px" }}>
-                  Instagram
-                </span>
+              <BsInstagram style={{ marginRight: "5px" }} />
+              <span>Instagram</span>
             </FooterLink>
             <FooterLink href="https://twitter.com/login?lang=en">
-              <BsTwitter/>
-                <span style={{ marginLeft: "10px" }}>
-                  Twitter
-                </span>
+              <BsTwitter style={{ marginRight: "5px" }} />
+              <span>Twitter</span>
             </FooterLink>
             <FooterLink href="https://www.youtube.com/">
-              <BsYoutube/>
-                <span style={{ marginLeft: "10px" }}>
-                  Youtube
-                </span>
+              <BsYoutube style={{ marginRight: "5px" }} />
+              <span>Youtube</span>
             </FooterLink>
-          </Column>
-          <Column>
-            <Heading>About</Heading>
-            <FooterLink href="/AboutUs">About Us</FooterLink>
-            <FooterLink href="/ContactUs">Contact Us</FooterLink>
-            <FooterLink href="/Careers">Careers</FooterLink>
-          </Column>
-          <Column>
-            <Heading>Help & Policies</Heading>
-            <FooterLink href="./PrivacyPolicy">Privacy Policy</FooterLink>
-            <FooterLink href="#">Payment Security</FooterLink>
-            <FooterLink href="./ReturnPolicy">Return Policy</FooterLink>
-            <FooterLink href="#">Terms & Conditions</FooterLink>
-          </Column>
-          <Column>
-            <Heading>Join Us</Heading>
-            <FooterLink href="#">Sell Your Product</FooterLink>
-            <FooterLink href="#">Advertise Your Product</FooterLink>
-          </Column>
-          
-        </Row> 
-        
+          </Row>
+
+          <Heading>About</Heading>
+          <Row>
+            <FooterLink href="/AboutUs">
+              <span>About Us</span>
+            </FooterLink>
+            <FooterLink href="/ContactUs">
+              <span>Contact Us</span>
+            </FooterLink>
+          </Row>
+        </Column>
       </Container>
     </Box>
   );
