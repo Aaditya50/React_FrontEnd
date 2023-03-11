@@ -22,8 +22,8 @@ const uservalidation=(values)=>{
     if(!values.cpwd){
         errors.cpwd="Confirm password is required"
     }
-    if(values.cpwd < 6){
-        errors.cpwd="minimum 6 character required"
+    if(values.pwd.length < 6){
+        errors.pwd="minimum 6 character required"
     }
     
     if(values.pwd && values.cpwd && values.pwd!==values.cpwd){
