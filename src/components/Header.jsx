@@ -12,7 +12,6 @@ function Header(){
            
           <div className="col-2"> {state.loggedin.IsLoggedIn ?
             <>            
-            {/* <h5 className="float-left">Role : {state.loggedin.Role}</h5> */}
             <h5 className="float-right">Welcome ! {state.loggedin.Username}</h5> </>:
             ''}
           </div>
